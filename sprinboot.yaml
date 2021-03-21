@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: sarath-springboot
-          image: 636352/growspringboot:latest
+          image: 636352/growspringboot:tag
           imagePullPolicy: Always
           ports:
             - containerPort: 8085
