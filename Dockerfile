@@ -18,7 +18,4 @@ ENTRYPOINT ["java", "-jar", "spring-boot-actuator-0.0.1-SNAPSHOT.jar"]
 
 
 
-#WORKDIR /app
-#COPY --from=MAVEN_BUILD /build/target/myproject-0.0.1-SNAPSHOT.jar /app/
-#EXPOSE 8080
-#ENTRYPOINT ["java", "-jar", "myproject-0.0.1-SNAPSHOT.jar"]
+

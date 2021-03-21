@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sarath-groww
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springboot
+  template:
+    metadata:
+      labels:
+        app: springboot
+    spec:
+      containers:
+        - name: sarath-springboot
+          image: 636352/growspringboot:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8085
+
+#service type load-balancer
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: springboot-svc
+spec:
+  selector:
+    app: springboot
+    ports:
+      - protocol: TCP
+      port: 8085
+      targetport: 8085
+    type: load-balancer
+          
