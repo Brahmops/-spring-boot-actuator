@@ -30,9 +30,9 @@ metadata:
 spec:
   selector:
     app: springboot
-    ports:
-        protocol: TCP
+  ports:
+    - protocol: TCP
       port: 8085
       targetport: 8085
-    type: load-balancer
+  type: load-balancer
           
