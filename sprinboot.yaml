@@ -3,10 +3,10 @@ kind: Deployment
 metadata:
   name: sarath-groww
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: springboot
+  replicas: 1
   template:
     metadata:
       labels:
