@@ -13,11 +13,11 @@ spec:
         app: springboot
     spec:
       containers:
-        - name: sarath-springboot
+      - name: sarath-springboot
           image: 636352/growspringboot:tag
           imagePullPolicy: Always
           ports:
-             - containerPort: 8085
+          - containerPort: 8085
 
 #service type load-balancer
 
